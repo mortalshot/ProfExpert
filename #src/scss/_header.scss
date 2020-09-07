@@ -1,0 +1,156 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 2;
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		height: 100px;
+
+		@media screen and (max-width: 767px) {
+			height: 60px;
+		}
+	}
+
+	&__logo {
+		z-index: 3;
+	}
+
+	&__burger {
+		display: none;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			z-index: 3;
+			transition: 0.3s ease all 0s;
+
+			&::before,
+			&::after, span {
+				content: "";
+				background-color: #000;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: 0.3s ease all 0s;
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+
+			span {
+				top: 9px;
+			}
+
+			&.active {
+				&::before {
+					transform: rotate(45deg);
+					top: 9px;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+					bottom: 9px;
+				}
+
+				span {
+					transform: scale(0);
+				}
+			}
+		}
+	}
+
+	&__menu {
+
+
+		@media screen and (max-width: 767px) {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: #fff;
+			padding: 100px 15px 20px;
+			transition: 0.3s ease all 0s;
+
+			&.active {
+				top: 0;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1;
+	}
+}
+
+.logo {
+	&__link {
+		display: flex;
+	}
+
+	&__img {
+	}
+
+	&__text-wrapper {
+	}
+
+	&__name {
+	}
+
+	&__post {
+	}
+}

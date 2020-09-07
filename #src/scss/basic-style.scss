@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: Montserrat;
+    font-weight: 400;
+
+    @media screen and (max-width: 767px) {
+        &.lock {
+            overflow: hidden;
+        }
+    }
+}
+
+.container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 15px;
+}
