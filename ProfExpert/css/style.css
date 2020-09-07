@@ -1,0 +1,346 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444;
+}
+
+.container {
+  max-width: 1174px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.accent-color {
+  color: #00d476;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper__text {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 9px 16px;
+}
+
+.input-wrapper__text::-webkit-input-placeholder {
+  color: #7d838c;
+  opacity: 1;
+  -webkit-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.input-wrapper__text::-moz-placeholder {
+  color: #7d838c;
+  opacity: 1;
+  -moz-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.input-wrapper__text:-ms-input-placeholder {
+  color: #7d838c;
+  opacity: 1;
+  -ms-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.input-wrapper__text::-ms-input-placeholder {
+  color: #7d838c;
+  opacity: 1;
+  -ms-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.input-wrapper__text::placeholder {
+  color: #7d838c;
+  opacity: 1;
+  -webkit-transition: 0.5s ease all 0s;
+  -o-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.input-wrapper__text:focus {
+  outline: 0;
+}
+
+.input-wrapper__text:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper__text:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper__text:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper__text:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper__text:focus::placeholder {
+  opacity: 0;
+}
+
+.input-wrapper input[type="radio"] {
+  display: none;
+}
+
+.input-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.input-wrapper__label {
+  padding-left: 36px;
+  cursor: pointer;
+  position: relative;
+  line-height: 24px;
+  font-size: calc(13px + 3 * ((100vw - 320px) / (1440 - 320)));
+  line-height: calc(24 / 16);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.input-wrapper__label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: 1px solid #000;
+}
+
+.input-wrapper--radio input[type="radio"] + label:before {
+  border-radius: 50%;
+}
+
+.input-wrapper--radio input[type="radio"]:checked + label:before {
+  border-width: 8px;
+}
+
+.input-wrapper--check input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  line-height: 23px;
+  padding-left: 4px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 2;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 89px;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  z-index: 2;
+  margin-right: 50px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header__item {
+  margin-right: 28px;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.header__info {
+  z-index: 2;
+  text-align: right;
+}
+
+.header__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.header__phone-svg {
+  margin-left: 8px;
+}
+
+.header__hours {
+  font-size: 10px;
+  line-height: 12px;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+
+.logo__link {
+  font-family: Mayak;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.menu__link {
+  color: #444;
+  white-space: nowrap;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.menu__link.accent-color {
+  font-weight: 700;
+  color: #00d476;
+}
+
+.content {
+  padding: 100px 0px 0px 0px;
+}
+
+@media screen and (max-width: 1366px) {
+  body {
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(24 / 16);
+  }
+
+  .header__phone {
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(19 / 16);
+  }
+
+  .logo__link {
+    font-size: calc(16px + 6 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(32 / 22);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    padding: 100px 15px 20px;
+    -webkit-transition: 0.3s ease all 0s;
+    -o-transition: 0.3s ease all 0s;
+    transition: 0.3s ease all 0s;
+    text-align: center;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  .header__list {
+    display: block;
+  }
+
+  .content {
+    padding: 70px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .input-wrapper__text {
+    padding: 5px 16px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__hours {
+    display: none;
+  }
+}

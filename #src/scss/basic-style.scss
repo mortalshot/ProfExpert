@@ -1,16 +1,33 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 li {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+    color: $color-text;
+}
+
 body {
-    font-family: Montserrat;
+    font-family: $font-main;
     font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+
+    @media screen and (max-width: $size-layout-desktop + "px") {
+        font-size: calc(14px + 2 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+        line-height: calc(24 / 16);
+    }
 
     @media screen and (max-width: 767px) {
         &.lock {
@@ -20,7 +37,11 @@ body {
 }
 
 .container {
-    max-width: $container;
+    max-width: $size-container;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+}
+
+.accent-color {
+    color: $color-green;
 }
