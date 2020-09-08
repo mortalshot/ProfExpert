@@ -1,6 +1,10 @@
 @@include('vendors.js')
 
 $(document).ready(function () {
-    $('.tabs-triggers__item:first').click();
-    $('.accordion__title:first').click();
+
+    $('.howitworks .tabs-triggers__item:first').click();
+    $('.howitworks .accordion__title:first').click();
+
+    $('.price .tabs-triggers__item:first').click();
+    $('.price .accordion__title:first').click();
 });
