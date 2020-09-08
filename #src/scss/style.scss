@@ -12,10 +12,12 @@
 @import "variables";
 @import "basic-style";
 @import "input";
-@import "_header";
 
 // components
-@import "components/tabs";
+@import "components/_header";
+@import "components/_tabs";
+@import "components/_accordion";
+@import "components/_modals";
 
 .main-content {
 	padding: $size-header-height 0px 0px 0px;
@@ -333,10 +335,13 @@
 		@media screen and (max-width: 991px) {
 			margin: 0 -15px;
 		}
-
 		@media screen and (max-width: 767px) {
 			flex-wrap: wrap;
 			justify-content: center;
+			margin: 0;
+		}
+		@media screen and (max-width: 575px) {
+			justify-content: flex-start;
 		}
 	}
 
@@ -346,7 +351,6 @@
 		@media screen and (max-width: 991px) {
 			padding: 0 15px;
 		}
-
 		@media screen and (max-width: 767px) {
 			padding: 0px 0px 56px 0px;
 			&:last-child {
@@ -385,6 +389,64 @@
 		@media screen and (max-width: $size-layout-desktop + "px") {
 			font-size: calc(14px + 2 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
 			line-height: calc(21 / 16);
+		}
+	}
+
+	&__accordion {
+		margin: 20px 0;
+		@media screen and (min-width: 576px) {
+			display: none;
+		}
+
+		.accordion__item {
+			margin-bottom: 8px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.accordion__title {
+			box-shadow: 4px 8px 22px rgba(24, 48, 63, 0.08);
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			height: 80px;
+			padding: 22px 24px;
+			background: #fff;
+			z-index: 2;
+			border-bottom: 0;
+
+			&::before, &::after {
+				right: 24px;
+			}
+
+			&.active {
+				font-weight: 700;
+				border-bottom: 4px solid $color-green;
+			}
+
+			span {
+				@media screen and (max-width: 400px) {
+					max-width: 193px;
+				}
+			}
+		}
+
+		.accordion__text {
+			background: #f9f9f9;
+			padding: 88px 20px;
+			margin: -40px -20px -47px;
+			position: relative;
+			z-index: 1;
+
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 48px;
+			}
+		}
+
+		.accordion__wrapper {
+			padding: 0 14px;
 		}
 	}
 }
