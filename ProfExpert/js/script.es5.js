@@ -227,9 +227,11 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   $('.accordion__title').click(function (event) {
-    if ($('.accordion').hasClass('accordion-one')) {
-      $('.accordion__title').not($(this)).removeClass('active');
-      $('.accordion__text').not($(this).next()).slideUp(300);
+    var accordionid = $(this).closest('.accordion').attr("id");
+
+    if ($('#' + accordionid).hasClass('accordion-one')) {
+      $('#' + accordionid + ' ' + '.accordion__title').not($(this)).removeClass('active');
+      $('#' + accordionid + ' ' + '.accordion__text').not($(this).next()).slideUp(300);
     }
 
     $(this).toggleClass('active').next().slideToggle(300);
@@ -376,4 +378,6 @@ $(document).ready(function () {
   $('.howitworks .accordion__title:first').click();
   $('.price .tabs-triggers__item:first').click();
   $('.price .accordion__title:first').click();
+  $('#price-main-accordion .accordion__title:first').click();
+  $('#price-sub-accordion-1 .accordion__title:first').click();
 });
