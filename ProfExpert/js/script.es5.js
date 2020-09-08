@@ -31,7 +31,6 @@ $(document).ready(function () {
     $(this).addClass('tabs-triggers__item--active');
     $($(this).attr('href')).addClass('tabs-content__item--active');
   });
-  $('.tabs-triggers__item:first').click();
 });
 $(document).ready(function () {
   $('.accordion__title').click(function (event) {
@@ -179,4 +178,7 @@ document.addEventListener('keydown', function (e) {
   }
 })();
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  $('.tabs-triggers__item:first').click();
+  $('.accordion__title:first').click();
+});

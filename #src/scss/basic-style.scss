@@ -65,10 +65,10 @@ body {
     border: 1px solid #fff;
     border-radius: 4px;
     cursor: pointer;
-
-    @media screen and (max-width: $size-layout-desktop + 'px') {
-        font-size: calc(14px + 2 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
-        line-height: calc(20 / 16);
+    transition: 0.3s ease all 0s;
+    &:hover {
+        color: #fff;
+        border-color: $color-hover-link;
     }
 }
 .button--green {
@@ -78,6 +78,7 @@ body {
     transition: 0.3s ease all 0s;
     &:hover {
         background: $color-hover-button;
+        color: #fff;
     }
 }
 .button--medium {
@@ -94,9 +95,13 @@ body {
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
+    margin-bottom: 31px;
 
     @media screen and (max-width: $size-layout-desktop + 'px') {
         font-size: calc(20px + 8 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
         line-height: calc(34 / 28);
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 24px;
     }
 }
