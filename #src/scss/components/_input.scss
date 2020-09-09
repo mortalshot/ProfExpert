@@ -1,0 +1,42 @@
+.input-wrapper {
+	$input-font-size: 16px;
+	$input-line-height: 21px;
+	$input-font-weight: 500;
+	$input-padding-side: 8px;
+	@media screen and (max-width: 450px) {
+		$input-padding-side: 0px;
+	}
+
+	// .input-wrapper__text
+	&__text {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #cfcfcf;
+		padding: 13px $input-padding-side;
+		font-family: $font-main;
+		font-weight: $input-font-weight;
+		font-size: $input-font-size;
+		line-height: $input-line-height;
+		color: $color-text;
+
+		&:focus,
+		&:valid {
+			& + .input-wrapper__label {
+				font-size: 10px;
+				transform: translate(0, -51px);
+			}
+		}
+	}
+
+	&__label {
+		font-weight: $input-font-weight;
+		font-size: $input-font-size;
+		line-height: $input-line-height;
+		color: $color-hover-link;
+		padding: 0 $input-padding-side;
+		transform: translate(0, -33px);
+		cursor: text;
+		transition: 0.3s ease all 0s;
+		pointer-events: none;
+	}
+}

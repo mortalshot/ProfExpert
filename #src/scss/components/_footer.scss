@@ -1,0 +1,236 @@
+
+.footer {
+	@media screen and (min-width: 992px) {
+		padding-top: 32px;
+	}
+	@media screen and (max-width: 700px) {
+		padding-top: 19px;
+	}
+
+	// .footer__top
+	&__top {
+		padding-bottom: 55px;
+		@media screen and (max-width: 991px) {
+			padding-bottom: 44px;
+		}
+		@media screen and (max-width: 450px) {
+			padding-bottom: 10px;
+		}
+	}
+
+	// .footer__row
+	&__row {
+		margin: 0 -28px;
+		@media screen and (max-width: 1200px) {
+			margin: 0 -15px;
+		}
+		@media screen and (max-width: 991px) {
+			margin: 0 -7px;
+		}
+		@media screen and (max-width: 700px) {
+			margin: 0;
+		}
+	}
+
+	// .footer__column
+	&__column {
+		flex: 1 1 auto;
+		padding: 0 28px;
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width: 1200px) {
+			padding: 0 15px;
+		}
+		@media screen and (max-width: 991px) {
+			padding: 0 7px;
+		}
+		@media screen and (max-width: 700px) {
+			padding: 0;
+			&:first-child {
+				width: 100%;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		@media screen and (max-width: 450px) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__phone {
+		display: none;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(12px + 4 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(19 / 16);
+		}
+		@media screen and (max-width: 700px) {
+			display: block;
+		}
+
+		span {
+			margin-right: 8px;
+		}
+
+		svg {
+			@media screen and (max-width: 450px) {
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+
+	// .footer__logo-link
+	&__logo-link {
+		svg {
+			@media screen and (min-width: 701px) and (max-width: 767px) {
+				width: 124px;
+			}
+			@media screen and (max-width: 450px) {
+				width: 124px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		max-width: 202px;
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(8px + 4 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(16 / 12);
+		}
+		@media screen and (min-width: 701px) and (max-width: 767px) {
+			max-width: 124px;
+		}
+		@media screen and (max-width: 700px) {
+			max-width: 100%;
+		}
+	}
+
+	// .footer__menu
+	&__menu {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+
+		.menu__item {
+			margin-bottom: 12px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// .footer__link
+	&__link {
+		font-size: 14px;
+		line-height: 18px;
+		display: inline-block;
+		white-space: normal;
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(10px + 4 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(18 / 14);
+		}
+	}
+
+	// .footer__link--page
+	&__link--page {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		margin-bottom: 15px;
+		transition: 0.3s ease all 0s;
+		&:hover {
+			color: $color-hover-link;
+		}
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(12px + 4 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(21 / 16);
+		}
+	}
+
+	.certificate__right {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+
+	.certificate__offer {
+		max-width: 242px;
+		flex: 1 1 auto;
+		font-size: 20px;
+		line-height: 30px;
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(10px + 10 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(30 / 20);
+		}
+		@media screen and (max-width: 991px) {
+			max-width: 164px;
+		}
+	}
+
+	.certificate__button {
+		@media screen and (max-width: 991px) {
+			width: 164px;
+		}
+	}
+
+	// .footer__bottom
+	&__bottom {
+		background: $color-bg-f9;
+		padding: 24px 0;
+
+		@media screen and (max-width: 450px) {
+			padding: 20px 0;
+		}
+	}
+
+	&__bottom-row {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__bottom-item {
+		line-height: 1;
+	}
+
+	// .footer__bottom-link
+	&__bottom-link {
+		font-size: 12px;
+		line-height: 16px;
+		text-decoration: underline;
+
+		@media screen and (max-width: $size-layout-desktop + "px") {
+			font-size: calc(8px + 4 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
+			line-height: calc(16 / 12);
+		}
+	}
+
+	// .footer__kan
+	&__kan {
+		@media screen and (max-width: 450px) {
+			svg {
+				width: 60px;
+			}
+		}
+	}
+}
