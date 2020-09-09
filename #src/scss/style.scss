@@ -1352,10 +1352,6 @@
 		padding: 217px 0px 12px 0px;
 	}
 
-	// .faq__container
-	&__container {
-	}
-
 	// .faq__title
 	&__title {
 		margin-bottom: 38px;
@@ -1418,4 +1414,225 @@
 			}
 		}
 	}
+}
+
+.contacts {
+	padding: 96px 0;
+	@media screen and (max-width: 991px) {
+		padding: 62px 0;
+	}
+
+	// .contacts__container
+	&__container {
+	}
+
+	// .contacts__row
+	&__row {
+		@media screen and (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	// .contacts__left
+	&__left {
+		flex: 0 0 48.7%;
+		padding: 72px 64px 88px;
+
+		@media screen and (max-width: 991px) {
+			padding: 65px 30px 79px;
+			flex: 0 0 53%;
+		}
+		@media screen and (max-width: 767px) {
+			padding: 56px 20px 65px;
+			margin-bottom: 48px;
+		}
+		@media screen and (max-width: 575px) {
+			margin: 0 -20px 48px;
+			border-radius: 0;
+		}
+
+		&.box-bg {
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url(../img/contacts/bg.svg) no-repeat center/cover;
+			}
+		}
+	}
+
+	// .contacts__wrapper
+	&__wrapper {
+		color: #fff;
+		position: relative;
+		z-index: 1;
+	}
+
+	// .contacts__title
+	&__title {
+		margin-bottom: 64px;
+
+		@media screen and (max-width: $size-layout-desktop + 'px') {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		@media screen and (max-width: 991px) {
+			margin-bottom: 50px;
+		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	// .contacts__contact
+	&__contact {
+		display: flex;
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	// .contacts__img
+	&__img {
+		margin-right: 24px;
+	}
+
+	&__link {
+		color: #fff;
+	}
+
+	// .contacts__text
+	&__text {
+	}
+
+	// .contacts__right
+	&__right {
+		flex: 1 1 auto;
+		padding-left: 92px;
+		@media screen and (max-width: 991px) {
+			padding-left: 20px;
+		}
+		@media screen and (max-width: 767px) {
+			padding-left: 0;
+		}
+	}
+
+	// .contacts__form
+	&__form {
+		.input-wrapper {
+			margin-bottom: 5px;
+		}
+	}
+
+	// .contacts__button
+	&__button {
+		box-shadow: none;
+		@media screen and (max-width: 450px) {
+			margin-bottom: 12px;
+			width: 280px;
+		}
+	}
+
+	// .contacts__policy
+	&__policy {
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 14px;
+		color: #000;
+		flex: 1 1 auto;
+		padding-right: 19px;
+
+		@media screen and (max-width: 450px) {
+			padding-right: 0;
+		}
+
+		a {
+			font-weight: 400;
+			color: #0032e1;
+			text-decoration: underline;
+			display: inline-block;
+		}
+	}
+}
+.form-contacts {
+	// .form-contacts__title
+	&__title {
+		margin: 5px 0px 17px 0px;
+	}
+
+	// .form-contacts__text
+	&__text {
+		margin-bottom: 26px;
+		max-width: 404px;
+	}
+
+	&__row {
+		align-items: center;
+
+		@media screen and (min-width: 992px) {
+			margin-top: 20px;
+		}
+		@media screen and (max-width: 450px) {
+			flex-direction: column-reverse;
+			text-align: center;
+			margin-top: 28px;
+		}
+	}
+}
+
+.input-wrapper {
+	$input-font-size: 16px;
+	$input-line-height: 21px;
+	$input-font-weight: 500;
+	$input-padding-side: 8px;
+	@media screen and (max-width: 450px) {
+		$input-padding-side: 0px;
+	}
+
+	// .input-wrapper__text
+	&__text {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #cfcfcf;
+		padding: 13px $input-padding-side;
+		font-family: $font-main;
+		font-weight: $input-font-weight;
+		font-size: $input-font-size;
+		line-height: $input-line-height;
+		color: $color-text;
+
+		&:focus,
+		&:valid {
+			& + .input-wrapper__label {
+				font-size: 10px;
+				transform: translate(0, -51px);
+			}
+		}
+	}
+
+	&__label {
+		font-weight: $input-font-weight;
+		font-size: $input-font-size;
+		line-height: $input-line-height;
+		color: $color-hover-link;
+		padding: 0 $input-padding-side;
+		transform: translate(0, -33px);
+		cursor: text;
+		transition: 0.3s ease all 0s;
+		pointer-events: none;
+	}
+}
+.input-wrapper--button {
 }

@@ -108,3 +108,9 @@ body {
         margin-bottom: 24px;
     }
 }
+
+.box-bg {
+	background: radial-gradient(85.01% 188.36% at 12.35% 20.95%, #1f9cfd 0%, #0f81da 100%);
+	box-shadow: 16px 40px 84px rgba(24, 48, 63, 0.13), inset 20px 20px 92px rgba(21, 54, 154, 0.08);
+	border-radius: 8px;
+}
