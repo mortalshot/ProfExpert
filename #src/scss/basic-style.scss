@@ -28,11 +28,14 @@ body {
         font-size: calc(14px + 2 * ((100vw - 320px) / (#{$size-layout-desktop} - 320)));
         line-height: calc(24 / 16);
     }
-
     @media screen and (max-width: 767px) {
         &.lock {
             overflow: hidden;
         }
+    }
+
+    &.lock {
+        overflow: hidden;
     }
 }
 

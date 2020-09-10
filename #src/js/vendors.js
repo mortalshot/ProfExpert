@@ -1,6 +1,7 @@
 // libs
 @@include('libs/dynamic-adapt.js')
 @@include('libs/slick.min.js')
+@@include('libs/maskedinput.js')
 
 // components
 @@include('components/webp.js')

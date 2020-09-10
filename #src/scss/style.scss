@@ -459,6 +459,70 @@
 		}
 	}
 }
+.barcode {
+	&__laser {
+		opacity: 0;
+		animation: 2s laser forwards 2s;
+	}
+
+	&__rectangle {
+		animation: 2s slideup forwards;
+	}
+
+	&__barcode {
+		animation: 1s opacity0 forwards 3.2s;
+	}
+
+	&__success {
+		opacity: 0;
+		animation: 1s opacity1 forwards 4.2s;
+	}
+}
+
+@keyframes slideup {
+	from {
+		transform: translate(0, 100%);
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes laser {
+	0% {
+		transform: skew(0deg, -9deg);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: skew(0deg, -1deg);
+	}
+}
+
+@keyframes opacity0 {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes opacity1 {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 
 .offer {
 	padding: 94px 0 83px;
